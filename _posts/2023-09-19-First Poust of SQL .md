@@ -25,7 +25,7 @@ CREATE DATABASE database_name;
 if it woors you shoul se a mesage "CREATE DATABASE"
 ### Errasing a Database
 To errase a database, open pgAdmin and log in to Servers(), use the passwor and try to errase the database. 
-![Local Image](C:\Users\jujuj\OneDrive\Escritorio\blog\images\imagesBlog)
+![Image of reference pgAdmin V4 16.0.1](https://github.com/juanleal19/blog/blob/master/images/imagesBlog/ErraseDB.png)
 
 "
 
