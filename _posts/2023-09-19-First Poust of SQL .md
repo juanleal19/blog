@@ -21,3 +21,11 @@ To create a new database, open the SQL Shell and execute the following command:
 
 ```sql
 CREATE DATABASE database_name;
+```
+if it woors you shoul se a mesage "CREATE DATABASE"
+### Errasing a Database
+To errase a database, open pgAdmin and log in to Servers(), use the passwor and try to errase the database. 
+![Local Image](C:\Users\jujuj\OneDrive\Escritorio\blog\images\imagesBlog)
+
+"
+
