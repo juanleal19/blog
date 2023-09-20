@@ -1,14 +1,23 @@
 ---
 layout: post
-title: SQL with posgres
+title: Getting Started with PostgreSQL
 ---
-* Instal Postgresql
 
-## How to start in posgesql
+## Installation of PostgreSQL
 
-all of this steps are doing in SQL Shell
+To begin your journey with PostgreSQL, the first step is to install it on your system. Follow these installation steps:
 
-* Create a database
-> CREATE DATABASE nombre_x; 
-* To get insade a DB you need to follow tis comand
-> "\c nombre_x"
+1. Download and install [PostgreSQL](https://www.postgresql.org/download/) from the official website.
+
+2. During the installation, make sure to remember the password you set. You'll need it later.
+
+## Getting Started with PostgreSQL
+
+Now that you have PostgreSQL installed, let's start working with it using the SQL Shell.
+
+### Creating a Database
+
+To create a new database, open the SQL Shell and execute the following command:
+
+```sql
+CREATE DATABASE database_name;
