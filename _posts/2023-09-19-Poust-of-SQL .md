@@ -19,7 +19,7 @@ Now that you have PostgreSQL installed, let's start working with it using the SQ
 
 To create a new database, open the SQL Shell and execute the following command:
 
-``` sql
+```SQL
 CREATE DATABASE database_name;
 ```
 if it woors you shoul se a mesage "CREATE DATABASE"
@@ -37,7 +37,7 @@ The `SELECT` statement is one of the most fundamental commands in SQL. It is use
 
 1. **Retrieve all columns from `Table_1`:**
 
-```sql
+```
 ELECT *
 FROM Table_1 AS t1
 JOIN Table_2 AS t2
@@ -69,6 +69,4 @@ Let's explore some additional examples of the SELECT statement:
    ```
    SELECT SUM(sales_amount) AS total_sales
    FROM SalesTable;
-
-4. 
 
