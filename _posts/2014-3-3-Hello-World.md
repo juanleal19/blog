@@ -1,29 +1,72 @@
 ---
 layout: post
-title: PK & FK
+title: Getting Started with PostgreSQL
 ---
 
-# Primary Key
+# Installation of PostgreSQL
 
-A **primary** key is a column or a set of columns in a database table that uniquely identifies each row or record in that table. Here are some key points about primary keys:
+To begin your journey with PostgreSQL, the first step is to install it on your system. Follow these installation steps:
 
-1. Uniqueness: Every value in the primary key column(s) must be unique within the table. This ensures that no two rows in the table can have the same primary key value.
+1. Download and install [PostgreSQL](https://www.postgresql.org/download/) from the official website.
 
-2. Non-null: The values in the primary key column(s) cannot be NULL (i.e., empty or missing). This guarantees that each row has a valid identifier.
+2. During the installation, make sure to remember the password you set. You'll need it later.
 
-3. Indexing: Primary keys are often indexed by the database management system for fast retrieval and to enforce uniqueness.
+## Getting Started with PostgreSQL
 
-4. Relationships: Primary keys are commonly used to establish relationships between tables. Other tables can reference the primary key of a table as a foreign key to create associations between data.
+Now that you have PostgreSQL installed, let's start working with it using the SQL Shell.
 
-5. Example: In a database of employees, an "EmployeeID" column could be used as the primary key to uniquely identify each employee record. This ensures that no two employees have the same EmployeeID.
+### Creating a Database
 
-# Foreign Key
-A **foreign** key is a column or a set of columns in one table that is used to establish a link or relationship with the primary key of another table. Foreign keys are used to maintain referential integrity within a relational database. Here are some key points about foreign keys:
+To create a new database, open the SQL Shell and execute the following command:
 
-1. Referential Integrity: Foreign keys enforce referential integrity by ensuring that values in the foreign key column(s) of one table correspond to the values in the primary key column(s) of another table. This maintains the consistency and validity of data across related tables.
+``` sql
+CREATE DATABASE database_name;
+```
+if it woors you shoul se a mesage "CREATE DATABASE"
+### Errasing a Database
+To errase a database, open pgAdmin and log in to Servers(), use the passwor and try to errase the database. 
+![Image of reference pgAdmin V4 16.0.1](C:\Users\jujuj\OneDrive\Escritorio\blog\images\404.jpg``)
 
-2. Relationships: Foreign keys define relationships between tables. They indicate that there is a connection between data in one table and data in another.
+# SQL Basics
 
-3. Cascading Actions: Foreign keys can be configured to perform cascading actions when changes are made to the referenced primary key. For example, you can set up cascading deletes to automatically delete related records when a primary key is deleted.
+Before we dive into using PostgreSQL, let's cover some fundamental SQL commands. These commands will help you understand the basics of querying a database.
 
-4. Example: In a database that includes an "Orders" table and a "Customers" table, the "CustomerID" column in the "Orders" table can be a foreign key that references the "CustomerID" primary key in the "Customers" table. This establishes a relationship between customer records and their corresponding orders.
+## SELECT Statement
+
+The `SELECT` statement is one of the most fundamental commands in SQL. It is used to retrieve data from one or more tables. Here are a few examples to illustrate its usage:
+
+1. **Retrieve all columns from `Table_1`:**
+
+```sql
+ELECT *
+FROM Table_1 AS t1
+JOIN Table_2 AS t2
+ON t1.primary_key = t2.foreign_key;
+```
+In this case, we are selecting data from both **Table_1** (aliased as **t1**) and **Table_2** (aliased as **t2**). We are performing a join operation based on the equality of the **primary_key** in **t1** and the **foreign_key** in **t2**. This allows us to combine data from both tables based on the specified relationship.
+
+more about [`Primery key & foreign_ket`](https://juanleal19.github.io/blog/Hello-World/)
+
+Let's explore some additional examples of the SELECT statement:
+
+1. **Select Specific Columns**
+   You can select specific columns by listing them instead of using the asterisk. For instance, to retrieve only the `column1` and `column2` from `Table_1`:
+   ``` s
+    SELECT column1, column2
+    FROM Table_1;
+   ```
+2. **Filter Rows with the WHERE Clause**
+   To filter rows based on a specific condition, use the `WHERE` clause. For example, retrieve rows from `Table_1` where the `column3` is equal to `'value'`:
+   ```
+   SELECT *
+   WHERE column3 = 'value';
+   ```
+3. ***Aggregate Functions***
+   SQL allows you to perform aggregate functions like `SUM`, `COUNT`, `AVG`, etc. Here's an example of calculating the total sales amount from a sales table:
+   ```
+   SELECT SUM(sales_amount) AS total_sales
+   FROM SalesTable;
+   ```
+   SELECT SUM(sales_amount) AS total_sales
+   FROM SalesTable;
+

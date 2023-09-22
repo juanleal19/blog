@@ -51,3 +51,24 @@ Let's explore some additional examples of the SELECT statement:
 
 1. **Select Specific Columns**
    You can select specific columns by listing them instead of using the asterisk. For instance, to retrieve only the `column1` and `column2` from `Table_1`:
+   ``` s
+    SELECT column1, column2
+    FROM Table_1;
+   ```
+2. **Filter Rows with the WHERE Clause**
+   To filter rows based on a specific condition, use the `WHERE` clause. For example, retrieve rows from `Table_1` where the `column3` is equal to `'value'`:
+   ```
+   SELECT *
+   WHERE column3 = 'value';
+   ```
+3. ***Aggregate Functions***
+   SQL allows you to perform aggregate functions like `SUM`, `COUNT`, `AVG`, etc. Here's an example of calculating the total sales amount from a sales table:
+   ```
+   SELECT SUM(sales_amount) AS total_sales
+   FROM SalesTable;
+   ```
+   SELECT SUM(sales_amount) AS total_sales
+   FROM SalesTable;
+
+4. 
+
