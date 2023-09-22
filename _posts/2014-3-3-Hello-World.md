@@ -1,8 +1,7 @@
 ---
-layout: Post
-title: Primary Key & Foreign Key
+layout: post
+title: PK & FK
 ---
-
 
 # Primary Key
 
